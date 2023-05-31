@@ -1,0 +1,58 @@
+package com.echo.common.bank
+
+import com.echo.bank.common.base.QueryContext
+import com.echo.bank.framework.exception.BankException
+import org.slf4j.LoggerFactory
+import org.slf4j.Logger
+dialect "java"
+
+rule "checkQueryBalanceParamQueryFlag"
+    // salience 的值越大，越优先执行；
+    salience 99
+    // 对规则进行分组，以便后面按分组执行规则
+    agenda-group "checkParam"
+    //enabled属性用于指定当前规则是否启用，取值为true或者false，默认值true
+    enabled true
+    when
+        $queryContext: QueryContext(queryFlag == null || queryFlag == "")
+    then
+        final Logger log = LoggerFactory.getLogger("checkQueryBalanceParam") ;
+        log.info("规则引擎被执行, 校验发现参数queryFlag为空");
+        throw new BankException("必传参数queryFlag为空!");
+    end
+
+rule "checkQueryBalanceParamBankCode"
+    // salience 的值越大，越优先执行；
+    salience 99
+    agenda-group "checkParam"
+    when
+        $queryContext: QueryContext(bankCode == null || bankCode == "")
+    then
+        final Logger log = LoggerFactory.getLogger("checkQueryBalanceParamBankCode") ;
+        log.info("规则引擎被执行, 校验发现参数bankCode为空");
+        throw new BankException("必传参数bankCode为空!");
+    end
+
+rule "checkQueryBalanceParamCurrencyCode"
+    // salience 的值越大，越优先执行；
+    salience 98
+    agenda-group "checkParam"
+    when
+        $queryContext: QueryContext(currencyCode == null || currencyCode == "")
+    then
+        final Logger log = LoggerFactory.getLogger("checkQueryBalanceParamCurrencyCode") ;
+        log.info("规则引擎被执行, 校验发现参数currencyCode为空");
+        throw new BankException("必传参数currencyCode为空!");
+    end
+
+rule "checkQueryBalanceParamTraceId"
+    // salience 的值越大，越优先执行；
+    salience 98
+    agenda-group "checkParam"
+    when
+        $queryContext: QueryContext(traceId == null || traceId == "")
+    then
+        final Logger log = LoggerFactory.getLogger("checkQueryBalanceParamTraceId") ;
+        log.info("规则引擎被执行, 校验发现参数traceId为空");
+        throw new BankException("必传参数traceId为空!");
+    end

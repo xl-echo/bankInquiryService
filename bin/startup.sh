@@ -1,0 +1,1 @@
+nohup java -jar bankInquiryService.jar > log.file 2>&1 &

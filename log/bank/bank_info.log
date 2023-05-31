@@ -1,0 +1,91 @@
+2023-05-31 14:00:51.857 org.springframework.boot.StartupInfoLogger:logStarting:55 [main] INFO  Starting BankApplication using Java 1.8.0_221 on LAPTOP-8LU0DNM7 with PID 4112 (D:\codework\BankInquiryService\target\classes started by ASUS in D:\codework\BankInquiryService)
+2023-05-31 14:00:51.865 org.springframework.boot.SpringApplication:logStartupProfileInfo:634 [main] INFO  No active profile set, falling back to 1 default profile: "default"
+2023-05-31 14:00:52.413 org.kie.api.internal.utils.ServiceDiscoveryImpl:registerConfs:107 [main] INFO  Loading kie.conf from  
+2023-05-31 14:00:52.414 org.kie.api.internal.utils.ServiceDiscoveryImpl:loadConfs:117 [main] INFO  Discovered kie.conf url=jar:file:/D:/develop/maven/lib/org/drools/drools-core/7.6.0.Final/drools-core-7.6.0.Final.jar!/META-INF/kie.conf 
+2023-05-31 14:00:52.415 org.kie.api.internal.utils.ServiceDiscoveryImpl:processKieService:155 [main] INFO  Adding Service org.drools.core.io.impl.ResourceFactoryServiceImpl
+
+2023-05-31 14:00:52.416 org.kie.api.internal.utils.ServiceDiscoveryImpl:processKieService:155 [main] INFO  Adding Service org.drools.core.marshalling.impl.MarshallerProviderImpl
+
+2023-05-31 14:00:52.417 org.kie.api.internal.utils.ServiceDiscoveryImpl:processKieService:155 [main] INFO  Adding Service org.drools.core.concurrent.ExecutorProviderImpl
+
+2023-05-31 14:00:52.417 org.kie.api.internal.utils.ServiceDiscoveryImpl:registerConfs:107 [main] INFO  Loading kie.conf from  
+2023-05-31 14:00:52.417 org.kie.api.internal.utils.ServiceDiscoveryImpl:loadConfs:117 [main] INFO  Discovered kie.conf url=jar:file:/D:/develop/maven/lib/org/kie/kie-internal/7.6.0.Final/kie-internal-7.6.0.Final.jar!/META-INF/kie.conf 
+2023-05-31 14:00:52.418 org.kie.api.internal.utils.ServiceDiscoveryImpl:processKieService:155 [main] INFO  Adding Service org.kie.internal.services.KieWeaversImpl
+
+2023-05-31 14:00:52.419 org.kie.api.internal.utils.ServiceDiscoveryImpl:processKieService:155 [main] INFO  Adding Service org.kie.internal.services.KieBeliefsImpl
+
+2023-05-31 14:00:52.419 org.kie.api.internal.utils.ServiceDiscoveryImpl:processKieService:155 [main] INFO  Adding Service org.kie.internal.services.KieAssemblersImpl
+
+2023-05-31 14:00:52.420 org.kie.api.internal.utils.ServiceDiscoveryImpl:processKieService:155 [main] INFO  Adding Service org.kie.internal.services.KieRuntimesImpl
+
+2023-05-31 14:00:52.420 org.kie.api.internal.utils.ServiceDiscoveryImpl:registerConfs:107 [main] INFO  Loading kie.conf from  
+2023-05-31 14:00:52.420 org.kie.api.internal.utils.ServiceDiscoveryImpl:loadConfs:117 [main] INFO  Discovered kie.conf url=jar:file:/D:/develop/maven/lib/org/drools/drools-compiler/7.6.0.Final/drools-compiler-7.6.0.Final.jar!/META-INF/kie.conf 
+2023-05-31 14:00:52.422 org.kie.api.internal.utils.ServiceDiscoveryImpl:processKieService:155 [main] INFO  Adding Service org.drools.compiler.kie.builder.impl.KieServicesImpl
+
+2023-05-31 14:00:52.422 org.kie.api.internal.utils.ServiceDiscoveryImpl:processKieService:155 [main] INFO  Adding Service org.drools.compiler.builder.impl.KnowledgeBuilderFactoryServiceImpl
+
+2023-05-31 14:00:52.422 org.kie.api.internal.utils.ServiceDiscoveryImpl:registerConfs:107 [main] INFO  Loading kie.conf from  
+2023-05-31 14:00:52.423 org.kie.api.internal.utils.ServiceDiscoveryImpl:loadConfs:117 [main] INFO  Discovered kie.conf url=jar:file:/D:/develop/maven/lib/org/jbpm/jbpm-flow/7.6.0.Final/jbpm-flow-7.6.0.Final.jar!/META-INF/kie.conf 
+2023-05-31 14:00:52.424 org.kie.api.internal.utils.ServiceDiscoveryImpl:processKieService:155 [main] INFO  Adding Service org.jbpm.marshalling.impl.ProcessMarshallerFactoryServiceImpl
+
+2023-05-31 14:00:52.425 org.kie.api.internal.utils.ServiceDiscoveryImpl:processKieService:155 [main] INFO  Adding Service org.jbpm.process.instance.ProcessRuntimeFactoryServiceImpl
+
+2023-05-31 14:00:52.425 org.kie.api.internal.utils.ServiceDiscoveryImpl:registerConfs:107 [main] INFO  Loading kie.conf from  
+2023-05-31 14:00:52.425 org.kie.api.internal.utils.ServiceDiscoveryImpl:loadConfs:117 [main] INFO  Discovered kie.conf url=jar:file:/D:/develop/maven/lib/org/drools/drools-decisiontables/7.6.0.Final/drools-decisiontables-7.6.0.Final.jar!/META-INF/kie.conf 
+2023-05-31 14:00:52.427 org.kie.api.internal.utils.ServiceDiscoveryImpl:processKieService:155 [main] INFO  Adding Service org.drools.decisiontable.DecisionTableProviderImpl
+
+2023-05-31 14:00:52.428 org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor:intercept:323 [main] INFO  @Bean method RuleEngineConfig.kiePostProcessor is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
+2023-05-31 14:00:52.438 org.kie.spring.KModuleBeanFactoryPostProcessor:postProcessBeanFactory:102 [main] INFO  :: BeanFactoryPostProcessor::postProcessBeanFactory called ::
+2023-05-31 14:00:52.451 org.drools.compiler.kie.builder.impl.ClasspathKieProject:generatePomPropertiesFromPom:328 [main] INFO  Recursed up folders, found and used pom.xml D:\codework\BankInquiryService\pom.xml
+2023-05-31 14:00:52.452 org.kie.spring.KModuleBeanFactoryPostProcessor:postProcessBeanFactory:118 [main] INFO  Found project with releaseId: com.echo:bankInquiryService:0.0.1-SNAPSHOT
+2023-05-31 14:00:52.721 org.springframework.boot.web.embedded.tomcat.TomcatWebServer:initialize:108 [main] INFO  Tomcat initialized with port(s): 10080 (http)
+2023-05-31 14:00:52.727 org.apache.juli.logging.DirectJDKLog:log:173 [main] INFO  Initializing ProtocolHandler ["http-nio-10080"]
+2023-05-31 14:00:52.728 org.apache.juli.logging.DirectJDKLog:log:173 [main] INFO  Starting service [Tomcat]
+2023-05-31 14:00:52.728 org.apache.juli.logging.DirectJDKLog:log:173 [main] INFO  Starting Servlet engine: [Apache Tomcat/9.0.63]
+2023-05-31 14:00:52.818 org.apache.juli.logging.DirectJDKLog:log:173 [main] INFO  Initializing Spring embedded WebApplicationContext
+2023-05-31 14:00:52.818 org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:prepareWebApplicationContext:292 [main] INFO  Root WebApplicationContext: initialization completed in 921 ms
+2023-05-31 14:00:52.901 com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure:dataSource:56 [main] INFO  Init DruidDataSource
+2023-05-31 14:01:40.989 com.alibaba.druid.pool.DruidDataSource:init:930 [main] INFO  {dataSource-1} inited
+2023-05-31 14:01:41.174 com.echo.bank.framework.config.RuleEngineConfig:kieFileSystem:42 [main] INFO  path=drools/query-param-check.drl
+2023-05-31 14:01:41.195 org.drools.compiler.kie.builder.impl.KieRepositoryImpl:addKieModule:111 [main] INFO  KieModule was added: com.echo.bank.framework.config.RuleEngineConfig$$Lambda$610/862931361@53ea380b
+2023-05-31 14:01:41.731 org.drools.compiler.kie.builder.impl.KieRepositoryImpl:addKieModule:111 [main] INFO  KieModule was added: MemoryKieModule[releaseId=org.default:artifact:1.0.0-SNAPSHOT]
+2023-05-31 14:01:42.072 org.apache.juli.logging.DirectJDKLog:log:173 [main] INFO  Starting ProtocolHandler ["http-nio-10080"]
+2023-05-31 14:01:42.085 org.springframework.boot.web.embedded.tomcat.TomcatWebServer:start:220 [main] INFO  Tomcat started on port(s): 10080 (http) with context path ''
+2023-05-31 14:01:42.094 org.springframework.boot.StartupInfoLogger:logStarted:61 [main] INFO  Started BankApplication in 50.616 seconds (JVM running for 51.608)
+2023-05-31 14:01:46.840 org.apache.juli.logging.DirectJDKLog:log:173 [http-nio-10080-exec-1] INFO  Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-31 14:01:46.840 org.springframework.web.servlet.FrameworkServlet:initServletBean:525 [http-nio-10080-exec-1] INFO  Initializing Servlet 'dispatcherServlet'
+2023-05-31 14:01:46.841 org.springframework.web.servlet.FrameworkServlet:initServletBean:547 [http-nio-10080-exec-1] INFO  Completed initialization in 1 ms
+2023-05-31 14:01:47.537 com.echo.bank.controller.BankInquiryController:getDetail:30 [http-nio-10080-exec-1] INFO  <0><12749170750906048> 开始执行银行查询服务!
+2023-05-31 14:01:47.539 com.echo.bank.handler.AbstractProcessHandler:invoke:29 [http-nio-10080-exec-1] INFO  <0><12749170750906048> 开始执行查询，查询类型为：balance
+2023-05-31 14:01:47.539 com.echo.bank.handler.AbstractProcessHandler:checkParam:88 [http-nio-10080-exec-1] INFO  <0><12749170750906048> 开始执行规则引擎参数校验
+2023-05-31 14:01:47.583 com.echo.bank.handler.AbstractProcessHandler:checkParam:104 [http-nio-10080-exec-1] INFO  <0><12749170750906048> 规则引擎参数校验完成
+2023-05-31 14:01:47.817 com.echo.bank.bank.ICBC10201:queryBalance:39 [http-nio-10080-exec-1] INFO  <0><12749170750906048> 开始执行余额查询！方法：queryBalance被执行
+2023-05-31 14:01:47.891 com.echo.bank.bank.ICBC10201:queryBalance:43 [http-nio-10080-exec-1] INFO  <0><12749170750906048> bean to string xml success! xml content: <?xml version="1.0" encoding = "GBK"?>
+<CMS>
+    <eb>
+        <pub>
+            <TransCode>CNY</TransCode>
+            <QueryFlag>balance</QueryFlag>
+            <BankCode>102</BankCode>
+            <TraceID>1234567890</TraceID>
+            <TranDate></TranDate>
+            <TranTime></TranTime>
+        </pub>
+        <in>
+            <TotalNum></TotalNum>
+            <BLFlag></BLFlag>
+            <SynFlag>1</SynFlag>
+            <rd>
+                <AccNo></AccNo>
+                <CurrType></CurrType>
+                <AcctSeq></AcctSeq>
+                <MainAcctNo></MainAcctNo>
+            </rd>
+        </in>
+    </eb>
+</CMS>
+
+2023-05-31 14:01:48.190 com.echo.bank.framework.thread.ExecutorServiceUtil:getInstance:46 [http-nio-10080-exec-1] INFO  <0><12749170750906048> queue size: 0
+2023-05-31 14:01:48.191 com.echo.bank.framework.thread.ExecutorServiceUtil:getInstance:47 [http-nio-10080-exec-1] INFO  <0><12749170750906048> Number of active threads: 0
+2023-05-31 14:01:48.191 com.echo.bank.framework.thread.ExecutorServiceUtil:getInstance:48 [http-nio-10080-exec-1] INFO  <0><12749170750906048> Number of execution completion threads: 0
+2023-05-31 14:01:48.192 com.echo.bank.framework.aspect.OperationLogSaveThread:run:26 [dataMigration-1-thread-1] INFO  <0><12749170750906048> 开始异步执行记录请求日志!

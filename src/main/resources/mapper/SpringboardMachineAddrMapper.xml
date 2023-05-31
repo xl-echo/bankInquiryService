@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.echo.bank.dao.SpringboardMachineAddrMapper">
+    <resultMap id="BaseResultMap" type="com.echo.bank.pojo.SpringboardMachineAddr">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="bank_code" jdbcType="CHAR" property="bankCode"/>
+        <result column="machine_id" jdbcType="CHAR" property="machineId"/>
+        <result column="sign_ip" jdbcType="CHAR" property="signIp"/>
+        <result column="sign_port" jdbcType="CHAR" property="signPort"/>
+        <result column="trade_ip" jdbcType="CHAR" property="tradeIp"/>
+        <result column="trade_port" jdbcType="CHAR" property="tradePort"/>
+        <result column="channel_id" jdbcType="CHAR" property="channelId"/>
+        <result column="status" jdbcType="CHAR" property="status"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="create_user" jdbcType="VARCHAR" property="createUser"/>
+        <result column="update_time" jdbcType="TIMESTAMP" property="updateTime"/>
+        <result column="update_user" jdbcType="VARCHAR" property="updateUser"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        id, bank_code, machine_id, sign_ip, sign_port, trade_ip, trade_port, channel_id,
+        `status`, create_time, create_user, update_time, update_user
+    </sql>
+    <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from springboard_machine_addr
+        where id = #{id,jdbcType=BIGINT}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+        delete from springboard_machine_addr
+        where id = #{id,jdbcType=BIGINT}
+    </delete>
+    <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.echo.bank.pojo.SpringboardMachineAddr"
+            useGeneratedKeys="true">
+        insert into springboard_machine_addr (bank_code, machine_id, sign_ip,
+        sign_port, trade_ip, trade_port,
+        channel_id, `status`, create_time,
+        create_user, update_time, update_user
+        )
+        values (#{bankCode,jdbcType=CHAR}, #{machineId,jdbcType=CHAR}, #{signIp,jdbcType=CHAR},
+        #{signPort,jdbcType=CHAR}, #{tradeIp,jdbcType=CHAR}, #{tradePort,jdbcType=CHAR},
+        #{channelId,jdbcType=CHAR}, #{status,jdbcType=CHAR}, #{createTime,jdbcType=TIMESTAMP},
+        #{createUser,jdbcType=VARCHAR}, #{updateTime,jdbcType=TIMESTAMP}, #{updateUser,jdbcType=VARCHAR}
+        )
+    </insert>
+    <insert id="insertSelective" keyColumn="id" keyProperty="id"
+            parameterType="com.echo.bank.pojo.SpringboardMachineAddr" useGeneratedKeys="true">
+        insert into springboard_machine_addr
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="bankCode != null">
+                bank_code,
+            </if>
+            <if test="machineId != null">
+                machine_id,
+            </if>
+            <if test="signIp != null">
+                sign_ip,
+            </if>
+            <if test="signPort != null">
+                sign_port,
+            </if>
+            <if test="tradeIp != null">
+                trade_ip,
+            </if>
+            <if test="tradePort != null">
+                trade_port,
+            </if>
+            <if test="channelId != null">
+                channel_id,
+            </if>
+            <if test="status != null">
+                `status`,
+            </if>
+            <if test="createTime != null">
+                create_time,
+            </if>
+            <if test="createUser != null">
+                create_user,
+            </if>
+            <if test="updateTime != null">
+                update_time,
+            </if>
+            <if test="updateUser != null">
+                update_user,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="bankCode != null">
+                #{bankCode,jdbcType=CHAR},
+            </if>
+            <if test="machineId != null">
+                #{machineId,jdbcType=CHAR},
+            </if>
+            <if test="signIp != null">
+                #{signIp,jdbcType=CHAR},
+            </if>
+            <if test="signPort != null">
+                #{signPort,jdbcType=CHAR},
+            </if>
+            <if test="tradeIp != null">
+                #{tradeIp,jdbcType=CHAR},
+            </if>
+            <if test="tradePort != null">
+                #{tradePort,jdbcType=CHAR},
+            </if>
+            <if test="channelId != null">
+                #{channelId,jdbcType=CHAR},
+            </if>
+            <if test="status != null">
+                #{status,jdbcType=CHAR},
+            </if>
+            <if test="createTime != null">
+                #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="createUser != null">
+                #{createUser,jdbcType=VARCHAR},
+            </if>
+            <if test="updateTime != null">
+                #{updateTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateUser != null">
+                #{updateUser,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.echo.bank.pojo.SpringboardMachineAddr">
+        update springboard_machine_addr
+        <set>
+            <if test="bankCode != null">
+                bank_code = #{bankCode,jdbcType=CHAR},
+            </if>
+            <if test="machineId != null">
+                machine_id = #{machineId,jdbcType=CHAR},
+            </if>
+            <if test="signIp != null">
+                sign_ip = #{signIp,jdbcType=CHAR},
+            </if>
+            <if test="signPort != null">
+                sign_port = #{signPort,jdbcType=CHAR},
+            </if>
+            <if test="tradeIp != null">
+                trade_ip = #{tradeIp,jdbcType=CHAR},
+            </if>
+            <if test="tradePort != null">
+                trade_port = #{tradePort,jdbcType=CHAR},
+            </if>
+            <if test="channelId != null">
+                channel_id = #{channelId,jdbcType=CHAR},
+            </if>
+            <if test="status != null">
+                `status` = #{status,jdbcType=CHAR},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="createUser != null">
+                create_user = #{createUser,jdbcType=VARCHAR},
+            </if>
+            <if test="updateTime != null">
+                update_time = #{updateTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateUser != null">
+                update_user = #{updateUser,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.echo.bank.pojo.SpringboardMachineAddr">
+        update springboard_machine_addr
+        set bank_code = #{bankCode,jdbcType=CHAR},
+        machine_id = #{machineId,jdbcType=CHAR},
+        sign_ip = #{signIp,jdbcType=CHAR},
+        sign_port = #{signPort,jdbcType=CHAR},
+        trade_ip = #{tradeIp,jdbcType=CHAR},
+        trade_port = #{tradePort,jdbcType=CHAR},
+        channel_id = #{channelId,jdbcType=CHAR},
+        `status` = #{status,jdbcType=CHAR},
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+        create_user = #{createUser,jdbcType=VARCHAR},
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+        update_user = #{updateUser,jdbcType=VARCHAR}
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+
+    <select id="selectByBankCode" resultMap="BaseResultMap">
+        select <include refid="Base_Column_List"/> from springboard_machine_addr where bank_code = #{bankCode,jdbcType=CHAR} and `status` = '1'
+    </select>
+</mapper>

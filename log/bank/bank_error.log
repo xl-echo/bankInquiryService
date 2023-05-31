@@ -1,0 +1,2 @@
+2023-05-31 14:01:48.188 com.echo.bank.utils.HttpUtils:sendPostJson:190 [http-nio-10080-exec-1] ERROR <0><12749170750906048> 请求异常：null
+2023-05-31 14:01:51.859 com.echo.bank.framework.handler.GlobalExceptionHandler:runtimeException:32 [http-nio-10080-exec-1] ERROR <0><12749170750906048> Capture Exception By GlobalExceptionHandler: Code: 999 Detail: org.apache.http.client.ClientProtocolException

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE digester-rules PUBLIC "-//Apache Commons //DTD digester-rules XML V1.0//EN" "http://commons.apache.org/digester/dtds/digester-rules-3.0.dtd">
+<digester-rules>
+    <pattern value="content">
+        <object-create-rule classname="com.echo.bank.pojo.BalanceResult"/>
+        <bean-property-setter-rule pattern="code" propertyname="retCode"/>
+        <bean-property-setter-rule pattern="msg" propertyname="retMsg"/>
+
+        <pattern value="trans/info">
+            <object-create-rule classname="com.echo.bank.pojo.Balance"/>
+            <bean-property-setter-rule pattern="accNo" propertyname="accountNo"/>
+            <bean-property-setter-rule pattern="bal" propertyname="realBalance"/>
+            <bean-property-setter-rule pattern="avabal" propertyname="availableBalance"/>
+            <set-next-rule methodname="setBalance"/>
+        </pattern>
+    </pattern>
+</digester-rules>

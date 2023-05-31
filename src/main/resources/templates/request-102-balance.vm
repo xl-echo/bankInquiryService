@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding = "GBK"?>
+<CMS>
+    <eb>
+        <pub>
+            <TransCode>$!{currencyCode}</TransCode>
+            <QueryFlag>$!{queryFlag}</QueryFlag>
+            <BankCode>$!{bankCode}</BankCode>
+            <TraceID>$!{traceId}</TraceID>
+            <TranDate>$!{tranDate}</TranDate>
+            <TranTime>$!{tranTime}</TranTime>
+        </pub>
+        <in>
+            <TotalNum>$!{totalNum}</TotalNum>
+            <BLFlag></BLFlag>
+            <SynFlag>1</SynFlag>
+            <rd>
+                <AccNo>$!{account.accountNo}</AccNo>
+                <CurrType>$!{currency}</CurrType>
+                <AcctSeq></AcctSeq>
+                <MainAcctNo></MainAcctNo>
+            </rd>
+        </in>
+    </eb>
+</CMS>
